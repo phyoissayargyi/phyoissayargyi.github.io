@@ -54,7 +54,7 @@
             requestAnimationFrame(draw);
         }
 
-        draw(m); // Start the game loop
+        draw(); // Start the game loop
     </script>
 </body>
 </html>
