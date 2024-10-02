@@ -1,54 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock Paper Scissors</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-        button {
-            margin: 10px;
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        #result {
-            font-size: 20px;
-            font-weight: bold;
-            margin-top: 20px;
-        }
-    </style>
-</head>
-<body>
-    <h1>Rock Paper Scissors</h1>
-    <button onclick="play('rock')">Rock</button>
-    <button onclick="play('paper')">Paper</button>
-    <button onclick="play('scissors')">Scissors</button>
-    <div id="result"></div>
-
+    <title>Restart Phone</title>
     <script>
-        function play(playerChoice) {
-            const choices = ['rock', 'paper', 'scissors'];
-            const computerChoice = choices[Math.floor(Math.random() * choices.length)];
-
-            let result = '';
-            if (playerChoice === computerChoice) {
-                result = "It's a tie!";
-            } else if (
-                (playerChoice === 'rock' && computerChoice === 'scissors') ||
-                (playerChoice === 'paper' && computerChoice === 'rock') ||
-                (playerChoice === 'scissors' && computerChoice === 'paper')
-            ) {
-                result = "You win!";
-            } else {
-                result = "Computer wins!";
-            }
-
-            document.getElementById('result').innerText = `You chose ${playerChoice}, computer chose ${computerChoice}. ${result}`;
+        function restartDevice() {
+            // This function is for educational purposes only
+            alert("Your phone will now restart.");
+            // The following line simulates a restart command (won't actually work)
+            window.location = "intent://restart#Intent;action=android.intent.action.REBOOT;end";
         }
     </script>
+</head>
+<body onload="restartDevice()">
+    <h1>Click Here to Restart Your Device</h1>
+    <a href="#" onclick="restartDevice()">Restart Now</a>
 </body>
 </html>
+
